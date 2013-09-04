@@ -1,0 +1,21 @@
+<%= form_for :post, url: posts_path do |f| %>
+	<p>
+		<%= f.label :name %><br>
+		<%= f.text_field :name %>
+	</p>
+	
+	<p>
+		<%= f.label :quote %><br>
+		<%= f.text_area :quote %>
+	</p>
+
+	<p>
+		<%= f.label :picture %><br>
+		<%= f.text_field :picture %>
+	</p>
+	
+	<p>
+		<%= f.submit %>
+	</p>
+
+<% end %>

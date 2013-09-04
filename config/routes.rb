@@ -1,6 +1,8 @@
 Postup::Application.routes.draw do
-  get "posts/index"
-  get "posts/new"
+  root 'pages#home'
+  
+  resources :posts
+
   get "pages/home"
   get "pages/about"
   # The priority is based upon order of creation: first created -> highest priority.
