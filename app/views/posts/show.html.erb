@@ -10,5 +10,5 @@
 
 <p>
 	<strong>Picture:</strong>
-	<%= @post.picture %>
+	<%= image_tag(@post.picture_url, :width => 600) if @post.picture.present? %>
 </p>
