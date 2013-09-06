@@ -7,6 +7,7 @@
 				<%= link_to post.name, post%>
 				<%= image_tag post.picture_url, :width => '25%' if post.picture.present? %>
 				<%= post.quote %>
+				<%= link_to 'Edit', edit_post_path(post) %>
 			</div>
 		<% end %>
 	</div>
