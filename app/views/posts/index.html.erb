@@ -1,17 +1,13 @@
 <h1>Posts</h1>
  
-<table>
-  <tr>
-    <th>Name:</th>
-    <th>Quote:</th>
-	<th>Picture:</th>
-  </tr>
- 
-  <% @posts.each do |post| %>
-    <tr>
-      <td><%= post.name %></td>
-      <td><%= post.quote %></td>
-	  <td><%= post.picture %></td>
-    </tr>
-  <% end %>
-</table>
+<% @posts.in_groups_of(3) do |group| %>
+	<div class="row">
+		<% group.compact.each do |post| %>
+			<div class="span4">
+				<%= link_to post.name, post%>
+				<%= image_tag post.picture_url, :width => '25%' if post.picture.present? %>
+				<%= post.quote %>
+			</div>
+		<% end %>
+	</div>
+<% end %>
