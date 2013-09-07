@@ -11,4 +11,10 @@
  *= require_self
  *= require_tree .
  */
-
+.boxquote { width: 300px;
+	height: 300px;}
+	
+body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }

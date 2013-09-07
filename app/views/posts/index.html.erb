@@ -1,25 +1,24 @@
 <h1>Posts</h1>
- 
+	
 <% @posts.in_groups_of(3) do |group| %>
+<div class="row">
 		<% group.compact.each do |post| %>
-			<div class="span4">
-				<%= link_to post.name, post%>
-				<p><%= image_tag post.picture_url, :width => '25%' if post.picture.present? %>
+		<div class="span4">
+				<center><h2><%= link_to post.name, post%></h2><center>
+				<p><%= image_tag post.picture_url, :width => '100%' if post.picture.present? %>
 				</p>
 				
 				<p>
-				<%= post.quote %>
+					<center><h4><%= post.quote %></h4></center>
 				</p>
 				
 				<p>
-				<%= link_to 'Edit', edit_post_path(post) %>
-				</p>
-
-				<p>
+				<%= link_to 'Edit', edit_post_path(post) %> |
 				<%= link_to 'Delete', post_path(post),
 								method: :delete, data: { confirm: 'Are you sure?' } %>
 				</p>
-				
-			</div>
+				<hr>
+			</div>				
 		<% end %>
+	</div>
 <% end %>
