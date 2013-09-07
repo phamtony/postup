@@ -1,7 +1,9 @@
 Postup::Application.routes.draw do
   root 'pages#home'
   
-  resources :posts
+  resources :posts do 
+    resources :comments
+  end
 
   get "pages/home"
   get "pages/about"

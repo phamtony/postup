@@ -12,3 +12,10 @@
 	<strong>Picture:</strong>
 	<%= image_tag(@post.picture_url, :width => 600) if @post.picture.present? %>
 </p>
+
+	<h2>Comments</h2>
+	<%= render 'comments/comment' %>
+	
+
+<h2>Add a Comment:</h2>
+	<%= render 'comments/form' %>
