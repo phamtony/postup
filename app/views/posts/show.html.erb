@@ -1,17 +1,15 @@
 <p>
-	<strong>Name:</strong>
-	<%= @post.name %>
-</p>
+	<center><h1><%= @post.name %></h1></center>
+</p><br>
 
 <p>
-	<strong>Quote:</strong>
-	<%= @post.quote %>
-</p>
+	<center><%= image_tag(@post.picture_url, :width => 500) if @post.picture.present? %></center>
+</p><br>
 
 <p>
-	<strong>Picture:</strong>
-	<%= image_tag(@post.picture_url, :width => 600) if @post.picture.present? %>
+	<center><h3><%= @post.quote %></h3></center>
 </p>
+<hr>
 
 	<h2>Comments</h2>
 	<%= render 'comments/comment' %>
