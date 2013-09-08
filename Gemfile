@@ -9,6 +9,9 @@ gem 'pg'
 # Use carrierwave to use photo uploader
 gem 'carrierwave'
 
+# Devise for user login and authentication 
+gem 'devise'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
